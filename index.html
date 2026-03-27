@@ -3,47 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Boda - Arias & Briyith</title>
+    <title>Boda Arenas Arias </title>
+    <!-- Fuentes de Lujo -->
     <link href="https://fonts.googleapis.com" rel="stylesheet">
-    <style>
-        body { font-family: 'Montserrat', sans-serif; background: #FDFBF7; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .login-card { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; border: 1px solid #D4AF37; }
-        h1 { font-family: 'Great Vibes', cursive; color: #D4AF37; font-size: 3rem; margin-bottom: 20px; }
-        input { padding: 12px; width: 80%; border: 1px solid #ddd; border-radius: 25px; margin-bottom: 20px; text-align: center; }
-        button { background: #D4AF37; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer; font-weight: bold; }
-        #contenido { display: none; width: 100%; text-align: center; }
-    </style>
+    <!-- Galería Deslizable -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- PANTALLA DE SEGURIDAD -->
-    <div id="login" class="login-card">
-        <h1>Bienvenidos</h1>
-        <p>Por favor, ingresa el código mágico de nuestra invitación:</p>
-        <input type="password" id="pass" placeholder="Código de acceso">
+    <!-- 1. PORTADA IMAGEN -->
+    <header class="header-image">
+        <img src="portada.jpg" alt="Boda Arenas Arias" class="img-full">
+    </header>
+
+    <!-- 2. CUENTA REGRESIVA -->
+    <section class="countdown section">
+        <h2 class="serif-title">Faltan solo...</h2>
+        <div id="timer">
+            <div class="time-box"><span id="days">00</span><p>Días</p></div>
+            <div class="time-box"><span id="hours">00</span><p>Hs</p></div>
+            <div class="time-box"><span id="minutes">00</span><p>Min</p></div>
+            <div class="time-box"><span id="seconds">00</span><p>Seg</p></div>
+        </div>
+    </section>
+
+    <!-- 3. MÚSICA -->
+    <div class="music-container">
+        <audio id="weddingAudio" loop>
+            <source src="cancion.mp3" type="audio/mpeg">
+        </audio>
+        <button id="musicBtn" class="play-btn"> Dale play a nuestra canción</button>
+    </div>
+
+    <!-- 4. NUESTRA HISTORIA -->
+    <section class="story section">
+        <h2 class="serif-title">Nuestra Historia </h2>
+        
+        <h3 class="script-subtitle">El primer día</h3>
+        <p class="story-text">Juan siempre dice que fue amor a primera vista. Nos conocimos gracias a amigos en común y pronto empezamos a compartir momentos haciendo deporte. Entre conversaciones cada vez más largas y risas por todo lo que descubríamos que teníamos en común, nació algo especial. <br><br> Con el tiempo, comenzamos a salir... decidimos caminar juntos por el resto de nuestras vidas.</p>
+
+        <h3 class="script-subtitle">“Bendito 22 de octubre”</h3>
+        <p class="story-text">En una cena romántica, preparada con todo su cariño en el día de mi cumpleaños, me sorprendió con un corte de carne exquisito. Entre velas y sonrisas, me pidió que fuera su novia… y, sin dudarlo, dije que sí.</p>
+
+        <h3 class="script-subtitle">“Sí quiero”</h3>
+        <p class="story-text">Otro 22 de octubre, otra vez en mi cumpleaños, llegó uno de los días más inolvidables de mi vida. Con cada detalle pensado con ternura, nos comprometimos. No había más que lágrimas de felicidad, porque en ese instante supe que había encontrado al hombre más extraordinario.</p>
+    </section>
+
+    <!-- 5. GALERÍA DESLIZABLE -->
+    <section class="moments section">
+        <h2 class="serif-title">Nuestros Momentos </h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="foto3.jpg"></div>
+                <div class="swiper-slide"><img src="foto5.jpg"></div>
+                <div class="swiper-slide"><img src="foto4.jpg"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- 6. DETALLES -->
+    <section class="details section">
+        <h2 class="serif-title">Detalles de la Boda </h2>
+        <p class="info-text">4:00 PM | Conjunto de cabañas "El Ancla del Galeón"<br>Santiago de Tolú</p>
+        <a href="https://maps.app.goo.gl" target="_blank" class="btn-gold">CÓMO LLEGAR</a>
+    </section>
+
+    <!-- 7. AGENDA -->
+    <section class="agenda section">
+        <h2 class="serif-title">Agenda Especial </h2>
+        <div class="timeline">
+            <div class="step"><span>4:00 PM</span> Ceremonia </div>
+            <div class="step"><span>5:00 PM</span> Postres y bebidas </div>
+            <div class="step"><span>5:30 PM</span> Brindis </div>
+            <div class="step"><span>6:00 PM</span> Cena </div>
+            <div class="step"><span>7:00 PM</span> Fiesta </div>
+            <div class="step"><span>7:30 PM</span> Salida de recién casados </div>
+        </div>
+    </section>
+
+    <!-- 8 y 9. RULES & DRESS CODE -->
+    <section class="rules section">
+        <h2 class="serif-title">Wedding Rules </h2>
+        <ul class="rules-list">
+            <li>Amamos a tus niños, pero esta boda será solo para adultos.</li>
+            <li>Evita los colores blancos, ivory, crema, beige o derivados en tu outfit.</li>
+        </ul>
         <br>
-        <button onclick="validar()">Entrar</button>
-    </div>
+        <h2 class="serif-title">Código de Vestimenta</h2>
+        <a href="https://pin.it/4pPY3XcfW" target="_blank" class="btn-pinterest">Mira algunas sugerencias aquí</a>
+    </section>
 
-    <!-- CONTENIDO REAL DE LA BODA (Se oculta hasta poner la clave) -->
-    <div id="contenido">
-        <h1 style="margin-top: 50px;">¡Bienvenidos a nuestra historia!</h1>
-        <p>Aquí irá toda tu invitación: Fotos, Mapa, RSVP...</p>
-        <!-- Aquí pegaremos el diseño completo en el siguiente paso -->
-    </div>
+    <!-- 10. REGALOS -->
+    <section class="gifts section">
+        <h2 class="serif-title">Regalos </h2>
+        <p>Tu presencia es nuestro mejor regalo, pero si quieres enviarnos tu cariño:</p>
+        <img src="https://cdn-icons-png.flaticon.com" width="60" style="margin: 20px 0;">
+        <p class="script-subtitle" style="font-size: 2rem;">Lluvia de Sobres</p>
+    </section>
 
-    <script>
-        function validar() {
-            var clave = document.getElementById("pass").value;
-            // CAMBIA "1234" por la clave que tú quieras darle a tus invitados
-            if (clave == "2612") { 
-                document.getElementById("login").style.display = "none";
-                document.getElementById("contenido").style.display = "block";
-                document.body.style.display = "block"; // Permite scroll
-            } else {
-                alert("Código incorrecto, por favor revisa tu invitación física o mensaje.");
-            }
-        }
-    </script>
+    <!-- 11. CONFIRMACIÓN (FORMSUBMIT) -->
+    <section class="rsvp section">
+        <h2 class="serif-title">¿Nos acompañarás? </h2>
+        <p>Favor confirmar su asistencia</p>
+        <form action="https://formsubmit.co" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="Nombre" placeholder="Nombre completo" required>
+            <p><small>*Cupo unipersonal</small></p>
+            <textarea name="Mensaje" placeholder="Mensaje para los novios"></textarea>
+            <button type="submit" class="btn-gold">Confirmar Asistencia</button>
+        </form>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net"></script>
+    <script src="script.js"></script>
 </body>
 </html>
