@@ -1,0 +1,78 @@
+:root {
+    --gold: #b3924e;
+    --text: #4a4a4a;
+    --sand: #fdfaf6;
+}
+
+body {
+    margin: 0;
+    background-color: var(--sand);
+    font-family: 'Lato', sans-serif;
+    color: var(--text);
+    text-align: center;
+}
+
+.img-full { width: 100%; display: block; }
+
+.section { padding: 80px 20px; }
+
+.serif-title {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 4px;
+    color: var(--gold);
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.script-subtitle {
+    font-family: 'Pinyon Script', cursive;
+    color: var(--gold);
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.story-text {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Timeline */
+.timeline { max-width: 400px; margin: auto; text-align: left; border-left: 1px solid var(--gold); padding-left: 20px; }
+.step { margin-bottom: 20px; font-weight: 300; }
+.step span { color: var(--gold); font-family: 'Cinzel'; margin-right: 10px; }
+
+/* Botones */
+.btn-gold, .btn-pinterest {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    font-family: 'Cinzel';
+    letter-spacing: 2px;
+    transition: 0.4s;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-gold:hover { background: var(--gold); color: white; }
+
+/* Countdown */
+#timer { display: flex; justify-content: center; gap: 20px; }
+.time-box span { font-size: 2.5rem; display: block; font-weight: 300; }
+
+/* Swiper Galería */
+.swiper { width: 100%; max-width: 500px; }
+.swiper-slide img { width: 100%; border-radius: 5px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+/* Formulario */
+form input, form textarea {
+    width: 100%; max-width: 400px;
+    padding: 15px; margin: 10px 0;
+    border: none; border-bottom: 1px solid var(--gold);
+    background: transparent; font-family: 'Lato';
+}
