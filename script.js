@@ -11,19 +11,23 @@ setInterval(function() {
     document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
 }, 1000);
 
-// 2. CONTROL DE MÚSICA
 const audio = document.getElementById("weddingAudio");
 const musicBtn = document.getElementById("musicBtn");
 
-musicBtn.addEventListener("click", () => {
+musicBtn.addEventListener("click", function() {
     if (audio.paused) {
-        audio.play();
-        musicBtn.innerText = "⏸ Pausar nuestra canción";
+        audio.play().then(() => {
+            musicBtn.innerHTML = "⏸ PAUSAR MÚSICA";
+        }).catch(error => {
+            console.log("Error al reproducir:", error);
+            alert("Haz clic de nuevo para activar la música");
+        });
     } else {
         audio.pause();
-        musicBtn.innerText = "🎵 Dale Play a nuestra canción";
+        musicBtn.innerHTML = "ESCUCHAR NUESTRA CANCIÓN";
     }
 });
+
 
 // 3. GALERÍA
 const swiper = new Swiper(".mySwiper", {
